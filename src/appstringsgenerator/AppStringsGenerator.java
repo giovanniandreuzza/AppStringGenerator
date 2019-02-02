@@ -1,5 +1,6 @@
 package appstringsgenerator;
 
+import appstringsgenerator.stringseditor.StringsEditorView;
 /**
  *
  * @author Giovanni
@@ -7,7 +8,7 @@ package appstringsgenerator;
 public class AppStringsGenerator {
 
     public static void main(String[] args) {
-        EditorStrings editorStrings = new EditorStrings();
+        StringsEditorView editorStrings = new StringsEditorView();
         
         editorStrings.setTitle("Editor di stringhe");
         editorStrings.setSize(700, 700);
