@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import javafx.util.Pair;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.DefaultListModel;
@@ -56,6 +58,8 @@ public class EditorStrings extends JFrame {
     
     private int countStrings = 1;
     private int countDetails = 1;
+    
+    private final ArrayList<Pair> stringListModel = new ArrayList<>();
     
     public EditorStrings(){
         setupUI();
