@@ -1,18 +1,27 @@
 package appstringsgenerator;
 
 import appstringsgenerator.stringseditor.StringsEditorView;
+import javax.swing.JFrame;
 /**
  *
  * @author Giovanni
  */
-public class AppStringsGenerator {
+public class AppStringsGenerator extends JFrame {
 
     public static void main(String[] args) {
-        StringsEditorView editorStrings = new StringsEditorView();
+        AppStringsGenerator app = new AppStringsGenerator();
+        app.buildUI();
+    }
+    
+    public void buildUI() {
+        StringsEditorView editorStrings = new StringsEditorView(this);
         
-        editorStrings.setTitle("Editor di stringhe");
-        editorStrings.setSize(700, 700);
-        editorStrings.setVisible(true);
+        setTitle("Editor di stringhe");
+        setSize(700, 700);
+        setVisible(true);
+       
+        getContentPane().add(editorStrings);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
 }

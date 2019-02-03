@@ -14,6 +14,7 @@ public class StringModel {
     public StringModel(String key, String value) {
         this.key = key;
         this.value = value;
+        detailList = new ArrayList();
     }
 
     public String getKey() {
@@ -34,6 +35,14 @@ public class StringModel {
 
     public ArrayList getDetailList() {
         return detailList;
+    }
+    
+    public void addDetail(String pathFile) {
+        detailList.add(pathFile);
+    }
+    
+    public void deleteDetailAt(int i) {
+        detailList.remove(i);
     }
 
     public void setDetailList(ArrayList detailList) {
